@@ -1,0 +1,22 @@
+<h1>Welcome to My Image Upload App!</h1>
+
+<h2>Upload Image</h2>
+
+<%= form_with url: uploads_path, local: true, html: { multipart: true } do |form| %>
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+  <div>
+    <%= form.submit "Upload" %>
+  </div>
+<% end %>
+
+<% if flash[:notice] %>
+  <p style="color: green;"><%= flash[:notice] %></p>
+<% elsif flash[:alert] %>
+  <p style="color: red;"><%= flash[:alert] %></p>
+<% end %>
+
+<br>
+<%= link_to 'View Uploaded Images', images_path %>

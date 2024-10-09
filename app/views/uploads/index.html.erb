@@ -1,0 +1,17 @@
+<h1>Uploaded Images</h1>
+
+<% if @images.any? %>
+  <ul>
+    <% @images.each do |image| %>
+      <li>
+        <img src="<%= image.public_url %>" alt="<%= image.key %>" style="max-width: 200px; max-height: 200px;" />
+        <p><%= image.key %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No images have been uploaded yet.</p>
+<% end %>
+
+<br>
+<%= link_to 'Back to Upload', root_path %>
