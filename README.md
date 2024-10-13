@@ -18,7 +18,7 @@ Image Upload App is a Ruby on Rails application that allows users to upload imag
 - Ruby
 - Rails
 - Bundler
-- AWS S3
+- AWS Account (for S3)
 
 ### Installation
 1. Clone the repository:
